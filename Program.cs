@@ -1,4 +1,4 @@
-using Proyecto.Formularios.Labs;
+using Proyecto.Formularios.Login;
 
 namespace Proyecto
 {
@@ -13,7 +13,7 @@ namespace Proyecto
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Laboratorios());
+            Application.Run(new Login());
         }
     }
 }

@@ -4,7 +4,7 @@
     <Compile Update="Formularios\Labs\Laboratorios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\Login\Login.cs">
+    <Compile Update="Formularios\Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

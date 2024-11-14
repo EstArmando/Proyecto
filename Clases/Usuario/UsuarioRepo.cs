@@ -10,10 +10,9 @@ namespace Proyecto.Clases.Usuario
 {
     internal class UsuarioRepo
     {
-        public Usuario ObtenerUsuario(string nombre, string contraseña)
+        public Usuario IniciarSesion(string nombre, string contraseña)
         {
             Conexion conexion = new Conexion();
-
             conexion.AbrirConexion();
 
             SqlCommand comando = new SqlCommand("sp_IniciarSesion", conexion.GetConexion())
@@ -32,30 +31,28 @@ namespace Proyecto.Clases.Usuario
                 {
                     Usuario usuario = new Usuario
                     {
-                        UsuarioId = reader.GetInt32(0),  
-                        Nombre = reader.GetString(1),    
-                        Correo = reader.GetString(2),    
-                        FechaRegistro = reader.GetString(3)  
+                        UsuarioId = reader.GetInt32(0),
+                        Nombre = reader.GetString(1),
+                        Correo = reader.GetString(2),
+                        FechaRegistro = reader.GetString(3)
                     };
-
-                    conexion.CerrarConexion();
-
                     return usuario;
                 }
                 else
                 {
-                    conexion.CerrarConexion();
                     return null;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al obtener el usuario: " + ex.Message);
-
-                conexion.CerrarConexion();
-
                 return null;
             }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
         }
+
     }
 }

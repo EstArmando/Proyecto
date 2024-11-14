@@ -39,7 +39,7 @@
             // btnIngresar
             // 
             btnIngresar.Cursor = Cursors.Hand;
-            btnIngresar.Location = new Point(125, 179);
+            btnIngresar.Location = new Point(121, 179);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(97, 23);
             btnIngresar.TabIndex = 11;
@@ -84,7 +84,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(65, 9);
+            label1.Location = new Point(67, 17);
             label1.Name = "label1";
             label1.Size = new Size(218, 45);
             label1.TabIndex = 6;
@@ -106,7 +106,7 @@
             MaximizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "LoginForm";
+            Text = "Login";
             FormClosing += LoginForm_FormClosing;
             ResumeLayout(false);
             PerformLayout();

@@ -47,7 +47,11 @@
             lblUsuario = new Label();
             btnCerrarSes = new Button();
             btnReporte = new Button();
+            menuStrip1 = new MenuStrip();
+            toolLabs = new ToolStripMenuItem();
+            toolUsuarios = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dtLabs).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -191,7 +195,7 @@
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUsuario.Location = new Point(12, 28);
+            lblUsuario.Location = new Point(12, 39);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(129, 30);
             lblUsuario.TabIndex = 16;
@@ -209,12 +213,35 @@
             // 
             // btnReporte
             // 
-            btnReporte.Location = new Point(623, 36);
+            btnReporte.Location = new Point(633, 47);
             btnReporte.Name = "btnReporte";
             btnReporte.Size = new Size(143, 23);
             btnReporte.TabIndex = 18;
             btnReporte.Text = "Generar reporte";
             btnReporte.UseVisualStyleBackColor = true;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolLabs, toolUsuarios });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.TabIndex = 19;
+            menuStrip1.Text = "menu";
+            // 
+            // toolLabs
+            // 
+            toolLabs.Name = "toolLabs";
+            toolLabs.Size = new Size(85, 20);
+            toolLabs.Text = "Laboratorios";
+            toolLabs.Click += toolLabs_Click;
+            // 
+            // toolUsuarios
+            // 
+            toolUsuarios.Name = "toolUsuarios";
+            toolUsuarios.Size = new Size(64, 20);
+            toolUsuarios.Text = "Usuarios";
+            toolUsuarios.Click += toolUsuarios_Click;
             // 
             // Laboratorios
             // 
@@ -240,6 +267,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Laboratorios";
@@ -247,6 +275,8 @@
             Text = "Laboratorios";
             FormClosing += Laboratorios_FormClosing;
             ((System.ComponentModel.ISupportInitialize)dtLabs).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -272,5 +302,8 @@
         private Label lblUsuario;
         private Button btnCerrarSes;
         private Button btnReporte;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem toolLabs;
+        private ToolStripMenuItem toolUsuarios;
     }
 }

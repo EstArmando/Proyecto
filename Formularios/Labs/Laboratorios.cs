@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Proyecto.Formularios.Login;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Proyecto.Clases.Labs;
+using Proyecto.Formularios.UsuariosForm;
 
 namespace Proyecto.Formularios.Labs
 {
@@ -96,16 +97,25 @@ namespace Proyecto.Formularios.Labs
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            //Logica para crear
-
             LimpiarCampos();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            //Logica para actualizar
-
             LimpiarCampos();
+        }
+
+        private void toolUsuarios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Usuarios usuarioForm = new Usuarios(usuario);
+            usuarioForm.Show();
+        }
+
+        private void toolLabs_Click(object sender, EventArgs e)
+        {
+            return;
+            
         }
     }
 }

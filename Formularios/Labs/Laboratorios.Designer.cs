@@ -50,6 +50,7 @@
             menuStrip1 = new MenuStrip();
             toolLabs = new ToolStripMenuItem();
             toolUsuarios = new ToolStripMenuItem();
+            btnEliminar = new Button();
             ((System.ComponentModel.ISupportInitialize)dtLabs).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -59,9 +60,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 98);
             label1.Name = "label1";
-            label1.Size = new Size(18, 15);
+            label1.Size = new Size(21, 15);
             label1.TabIndex = 0;
-            label1.Text = "ID";
+            label1.Text = "ID:";
             // 
             // label2
             // 
@@ -147,7 +148,7 @@
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(633, 203);
+            btnActualizar.Location = new Point(554, 203);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(75, 23);
             btnActualizar.TabIndex = 11;
@@ -243,11 +244,22 @@
             toolUsuarios.Text = "Usuarios";
             toolUsuarios.Click += toolUsuarios_Click;
             // 
+            // btnEliminar
+            // 
+            btnEliminar.Location = new Point(648, 203);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(75, 23);
+            btnEliminar.TabIndex = 20;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
+            // 
             // Laboratorios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 529);
+            Controls.Add(btnEliminar);
             Controls.Add(btnReporte);
             Controls.Add(btnCerrarSes);
             Controls.Add(lblUsuario);
@@ -305,5 +317,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolLabs;
         private ToolStripMenuItem toolUsuarios;
+        private Button btnEliminar;
     }
 }

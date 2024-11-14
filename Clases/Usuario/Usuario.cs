@@ -12,7 +12,7 @@ namespace Proyecto.Clases.Usuario
         private string nombre;
         private string correo;
         private string contraseña;
-        private string fechaRegistro;
+        private DateTime fechaRegistro;
 
         public int UsuarioId
         {
@@ -38,7 +38,7 @@ namespace Proyecto.Clases.Usuario
             set { contraseña = value; }
         }
 
-        public string FechaRegistro
+        public DateTime FechaRegistro
         {
             get { return fechaRegistro; }
             set { fechaRegistro = value; }

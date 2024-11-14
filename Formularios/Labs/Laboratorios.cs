@@ -115,7 +115,12 @@ namespace Proyecto.Formularios.Labs
         private void toolLabs_Click(object sender, EventArgs e)
         {
             return;
-            
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
     }
 }

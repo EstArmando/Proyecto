@@ -54,9 +54,9 @@ namespace Proyecto.Formularios.Labs
 
         private void CargarDatos()
         {
+            dtLabs.Rows.Clear();
             LaboratorioRepo laboratorioRepo = new LaboratorioRepo();
             List<Laboratorio> listaLaboratorios = laboratorioRepo.LeerLaboratorios();
-            dtLabs.Rows.Clear();
 
             if (listaLaboratorios != null && listaLaboratorios.Count > 0)
             {

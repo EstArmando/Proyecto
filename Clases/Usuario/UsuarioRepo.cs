@@ -1,5 +1,4 @@
 ﻿using Microsoft.Data.SqlClient;
-using Proyecto.Clases.Labs;
 using Proyecto.Clases.SQL;
 using System;
 using System.Collections.Generic;
